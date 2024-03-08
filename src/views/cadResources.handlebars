@@ -1,0 +1,210 @@
+<div class="container">
+
+    <div class="typecontract">
+      <div class="error">
+          {{#if success_typecontract}}
+              <div class="msgS">
+                  {{success_typecontract}}
+              </div>
+          {{/if}}
+
+          {{#if error_typecontract}}
+              <div class="msgE">
+                  {{error_typecontract}}
+              </div>
+          {{/if}}
+        </div>
+      <form action="/typecontract" method="post"> 
+
+        <label for="typecontract">Tipo do Contrato</label><br>
+        <input type="text" name="typecontract" id="typecontract">
+
+        <button>Cadastrar</button>
+
+      </form> 
+      <table>
+      <tr>
+        <th>
+          Tipos de Contrato
+        </th>
+      </tr>
+      {{#each typeContract}} 
+        <tr>
+          <td>
+            {{this.name}}
+          </td>
+        </tr>
+        {{/each}}
+        </table>
+    </div>
+
+    <div class="jobnomenclature">
+      <div class="error">
+          {{#if success_jobnomenclature}}
+              <div class="msgS">
+                  {{success_jobnomenclature}}
+              </div>
+          {{/if}}
+
+          {{#if error_jobnomenclature}}
+              <div class="msgE">
+                  {{error_jobnomenclature}}
+              </div>
+          {{/if}}
+        </div>
+      <form action="/jobnomenclature" method="post"> 
+
+        <label for="jobnomenclature">Nome do Cargo</label><br>
+        <input type="text" name="jobnomenclature" id="jobnomenclature"><br>
+
+        <label for="reftypecontract">Tipo do Contrato</label><br>
+        <select name="reftypecontract" id="reftypecontract">
+          {{#each typeContract}}
+          <option value="{{this._id}}">{{this.name}}</option>
+          {{/each}}
+        </select>
+
+        <button>Cadastrar</button>
+
+      </form> 
+      <table>
+        <tr>
+          <th>
+            Nomenclatura do cargo
+          </th>
+          <th>
+            Tipo de contrato
+          </th>
+        </tr>
+
+        {{#each jobNomenclature}} 
+        <tr>
+          <td>
+            {{this.name}}
+          </td>
+          <td>
+            {{this.typeContract.name}}
+          </td>
+        </tr>
+        {{/each}}
+      </table>
+    </div>
+
+    <div class="sector">
+      <div class="error">
+          {{#if success_sector}}
+              <div class="msgS">
+                  {{success_sector}}
+              </div>
+          {{/if}}
+
+          {{#if error_sector}}
+              <div class="msgE">
+                  {{error_sector}}
+              </div>
+          {{/if}}
+        </div>
+      <form action="/sector" method="post"> 
+
+        <label for="sector">Setor</label><br>
+        <input type="text" name="sector" id="sector">
+
+        <button>Cadastrar</button>
+
+      </form> 
+      <table>
+        <tr>
+          <th>
+            Setor
+          </th>
+        </tr>
+
+        {{#each Sector}} 
+        <tr>
+          <td>
+            {{this.name}}
+          </td>
+        </tr>
+        {{/each}}
+      </table>
+    </div>
+
+    <div class="secretary">
+      <div class="error">
+          {{#if success_secretary}}
+              <div class="msgS">
+                  {{success_secretary}}
+              </div>
+          {{/if}}
+
+          {{#if error_secretary}}
+              <div class="msgE">
+                  {{error_secretary}}
+              </div>
+          {{/if}}
+        </div>
+      <form action="/secretary" method="post"> 
+
+        <label for="secretary">Secretaria</label><br>
+        <input type="text" name="secretary" id="secretary">
+
+        <button>Cadastrar</button>
+
+      </form> 
+      <table>
+        <tr>
+          <th>
+            Secretaria
+          </th>
+        </tr>
+
+        {{#each Secretary}} 
+        <tr>
+          <td>
+            {{this.name}}
+          </td>
+        </tr>
+        {{/each}}
+      </table>
+    </div>
+
+    <div class="sex">
+      <div class="error">
+          {{#if success_sex}}
+              <div class="msgS">
+                  {{success_sex}}
+              </div>
+          {{/if}}
+
+          {{#if error_sex}}
+              <div class="msgE">
+                  {{error_sex}}
+              </div>
+          {{/if}}
+        </div>
+      <form action="/sex" method="post"> 
+
+        <label for="sex">Sexo</label><br>
+        <input type="text" name="sex" id="sex">
+
+        <button>Cadastrar</button>
+
+      </form> 
+      <table>
+        <tr>
+          <th>
+            Sexo
+          </th>
+        </tr>
+
+        {{#each Sex}} 
+        <tr>
+          <td>
+            {{this.name}}
+          </td>
+        </tr>
+        {{/each}}
+        </table>
+    </div>
+  
+</div>

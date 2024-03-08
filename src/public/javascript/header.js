@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const img = document.getElementById('image')
     let scrolled = false;
 
-    console.log(header)
-
     window.addEventListener('scroll', function () {
         if (window.scrollY > 100) { // Ajuste esse valor conforme necessário
             if (!scrolled) {

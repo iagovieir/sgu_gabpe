@@ -4,12 +4,12 @@ const schema = mongoose.Schema;
 const jobNomenclature = new schema({
     name: {
         type: String,
-        require: true,
+        required: true
     },
     typeContract:{
         type: String,
         ref: 'typeContract',
-        unique: false
+        required: true
     }
 })
 

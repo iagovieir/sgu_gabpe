@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/{{style}}">
-    <link rel="stylesheet" href="/css/{{style1}}">
-    <script src="/javascript/{{script}}"></script>
+    <link rel="shortcut icon" href="/image/logosOficial.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/{{page}}">
+    <link rel="stylesheet" href="/css/{{default}}">
+    {{#if header}}
+    <link rel="stylesheet" href="/css/{{header}}">
+    <script src="/javascript/{{headerjs}}"></script>
+    {{/if}}
+    {{#if menu}}
+    <link rel="stylesheet" href="/css/{{menu}}">
+    {{/if}}
 
     <title>{{title}}</title>
 </head>
 <body>
+    {{#if header}}
     {{>header}}
-    {{{body}}}    
+    {{/if}}
+    {{>menu}}
+    {{{body}}}
 </body>
 </html>

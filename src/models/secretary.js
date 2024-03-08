@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 
-const typeContract = new schema({  
+const secretary = new schema({  
     name: {
         type: String,
         required: true
     }
 })
 
-module.exports = mongoose.model('typeContract', typeContract);
+module.exports = mongoose.model('secretary', secretary);
