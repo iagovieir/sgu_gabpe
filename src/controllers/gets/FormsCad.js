@@ -16,14 +16,14 @@ cadResources: async (req, res)=>{
     const secretary = mongoose.model('secretary')
     const sex = mongoose.model('sex')
 
-    const typeContract = await typecontract.find({}).lean()
-    const jobNomenclature = await jobnomenclature.find({}).lean().populate('typeContract')
-    const Sector = await sector.find({}).lean()
-    const Secretary = await secretary.find({}).lean()
-    const Sex = await sex.find({}).lean()
+    const typeContract = await typecontract.find({}).limit(3).lean()
+    const jobNomenclature = await jobnomenclature.find({}).limit(3).lean().populate('typeContract')
+    const Sector = await sector.find({}).limit(3).lean()
+    const Secretary = await secretary.find({}).limit(3).lean()
+    const Sex = await sex.find({}).limit(3).lean()
 
     res.render('cadResources', {
-        title: 'Home - GABPE NEWS',
+        title: 'Home - GABPE',
         header: 'header.css',
         default: 'default.css',
         page: 'cadResources.css',
@@ -59,7 +59,7 @@ cadUsers: async (req, res)=>{
 
     res.render('cadUsers', {
         
-        title: 'Home - GABPE NEWS',
+        title: 'Cadastro de Funcionário - GABPE',
         header: 'header.css',
         default: 'default.css',
         page: 'cadResources.css',
