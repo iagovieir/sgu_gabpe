@@ -7,7 +7,7 @@ const {engine} = require('express-handlebars');
 const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/sgu-gabpe').then(()=>{
+mongoose.connect('mongodb+srv://iago-vieir:Iara.2000@cluster0.sfh8xr2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0').then(()=>{
     console.log(`conectado ao banco de dados`)
 }).catch((error)=>{
     console.log(`erro ao conectar ao banco de dados ${error}`)
