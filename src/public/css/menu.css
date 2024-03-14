@@ -50,3 +50,9 @@
     color: var(--color-white);
     align-items: center;
 }
+@media (max-width: 1012px){
+    .menu{
+      display: none;
+    }
+    
+  }

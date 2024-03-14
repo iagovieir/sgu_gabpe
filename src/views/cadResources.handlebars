@@ -1,19 +1,22 @@
 <div class="container">
 
     <div class="typecontract">
-      <div class="error">
           {{#if success_typecontract}}
+          <div class="success">
               <div class="msgS">
                   {{success_typecontract}}
               </div>
+            </div>
           {{/if}}
 
           {{#if error_typecontract}}
+            <div class="error">
               <div class="msgE">
                   {{error_typecontract}}
               </div>
+            </div>
           {{/if}}
-        </div>
+        
       <form action="/typecontract" method="post"> 
 
         <label for="typecontract">Tipo do Contrato</label><br>
@@ -36,22 +39,31 @@
         </tr>
         {{/each}}
         </table>
+        <div class="seemore">
+          <div class="btnSeeMore">
+            Ver mais +
+          </div>
+        </div>
     </div>
 
     <div class="jobnomenclature">
-      <div class="error">
+      
           {{#if success_jobnomenclature}}
+            <div class="success">
               <div class="msgS">
                   {{success_jobnomenclature}}
               </div>
+            </div>  
           {{/if}}
 
           {{#if error_jobnomenclature}}
+            <div class="error">
               <div class="msgE">
                   {{error_jobnomenclature}}
               </div>
+            </div>
           {{/if}}
-        </div>
+  
       <form action="/jobnomenclature" method="post"> 
 
         <label for="jobnomenclature">Nome do Cargo</label><br>
@@ -88,22 +100,32 @@
         </tr>
         {{/each}}
       </table>
+      <div class="seemore">
+          <div class="btnSeeMore">
+            Ver mais +
+          </div>
+      </div>
     </div>
 
     <div class="sector">
-      <div class="error">
+      
           {{#if success_sector}}
+            <div class="success">
               <div class="msgS">
                   {{success_sector}}
               </div>
+            </div>
           {{/if}}
 
           {{#if error_sector}}
+            <div class="error">
               <div class="msgE">
                   {{error_sector}}
               </div>
+            </div>
           {{/if}}
-        </div>
+
+      
       <form action="/sector" method="post"> 
 
         <label for="sector">Setor</label><br>
@@ -127,22 +149,32 @@
         </tr>
         {{/each}}
       </table>
+      <div class="seemore">
+          <div class="btnSeeMore">
+            Ver mais +
+          </div>
+      </div>
     </div>
 
     <div class="secretary">
-      <div class="error">
+      
           {{#if success_secretary}}
+            <div class="success">
               <div class="msgS">
                   {{success_secretary}}
               </div>
+            </div>
           {{/if}}
 
           {{#if error_secretary}}
+            <div class="error">
               <div class="msgE">
                   {{error_secretary}}
               </div>
+            </div>
           {{/if}}
-        </div>
+
+  
       <form action="/secretary" method="post"> 
 
         <label for="secretary">Secretaria</label><br>
@@ -166,22 +198,31 @@
         </tr>
         {{/each}}
       </table>
+      <div class="seemore">
+          <div class="btnSeeMore">
+            Ver mais +
+          </div>
+      </div>
     </div>
 
     <div class="sex">
-      <div class="error">
+      
           {{#if success_sex}}
+            <div class="success">
               <div class="msgS">
                   {{success_sex}}
               </div>
+            </div>
           {{/if}}
 
           {{#if error_sex}}
+            <div class="error">
               <div class="msgE">
                   {{error_sex}}
               </div>
+            </div>
           {{/if}}
-        </div>
+        
       <form action="/sex" method="post"> 
 
         <label for="sex">Sexo</label><br>
@@ -205,6 +246,11 @@
         </tr>
         {{/each}}
         </table>
+        <div class="seemore">
+          <div class="btnSeeMore">
+            Ver mais +
+          </div>
+        </div>
     </div>
   
 </div>

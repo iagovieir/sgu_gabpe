@@ -1,19 +1,46 @@
 .container{
     width: 80%;
     float: right;
-    padding-top: 75px;
+    padding-top: 100px;
     display: grid;
     place-items: center;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-gap: 20px;
-}
+  
+  }
 .error{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    text-align: center;
-    background-color: #ff000088;
     border-radius: 4px 4px 0px 0px;
 }
+.msgE{
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+  font-size: 10pt;
+  color: #ff000088;
+  border-radius: 4px 4px 0px 0px;
+}
+.success{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 4px 4px 0px 0px;
+}
+.msgS{
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+  font-size: 10pt;
+  color: rgb(13, 155, 13);
+  border-radius: 4px 4px 0px 0px;
+}
 .typecontract, .jobnomenclature, .sector, .secretary, .sex{
+    display: flex;
+    flex-direction: column;
     width: 300px;
     height: 100%;
     background-color: #ccc;
